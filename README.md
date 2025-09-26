@@ -56,71 +56,113 @@ Sales CRM Lite is a **full-featured Customer Relationship Management (CRM) web a
 
 ## **Getting Started**
 
+## **Setup & Installation**
+
 ### **Prerequisites**
-- Node.js v16+  
-- MongoDB Atlas account (or local MongoDB)  
-- Gmail account for email automation  
 
-### **Setup Backend**
+Before running the project, make sure you have:
 
-1. Clone the repository:
+* **Node.js** v16+ installed ([Download here](https://nodejs.org/))
+* **npm** (comes with Node.js)
+* **MongoDB Atlas account** or a local MongoDB instance
+* **Gmail account** (for email automation)
+
+---
+
+### **1️⃣ Clone the Repository**
 
 ```bash
 git clone https://github.com/Alaina1713/Sales-CRM-Lite.git
-cd Sales-CRM-Lite/backend
+cd Sales-CRM-Lite
+```
 
-Install dependencies:
+### **2️⃣ Setup Backend**
 
+1. Navigate to the backend folder:
+
+```bash
+cd backend
+```
+
+2. Install dependencies:
+
+```bash
 npm install
+```
 
+3. Create a `.env` file inside the **backend** folder:
 
-Create a .env file in backend folder:
-
-MONGO_URI=<your_mongodb_connection_string>
-JWT_SECRET=<your_jwt_secret>
-EMAIL_USER=<your_email>
-EMAIL_PASS=<your_email_app_password>
+```env
+MONGO_URI=mongodb+srv://sales-crm-lite:u0gzXdNpRx8Eu0Sa@cluster0.wk7zpvu.mongodb.net/sales-crm-lite?retryWrites=true&w=majority
+JWT_SECRET=u0gzXdNpRx8Eu0Sa
+EMAIL_USER=alainarahim17@gmail.com
+EMAIL_PASS=Alaina1317
 PORT=5000
+```
 
+> **Notes:**
+>
+> * `MONGO_URI` → MongoDB Atlas connection string
+> * `JWT_SECRET` → Secret key for JWT authentication
+> * `EMAIL_USER` & `EMAIL_PASS` → Gmail credentials for sending emails
+> * `PORT` → backend server port
 
-Start the backend server:
+4. Make sure your **IP is whitelisted** in MongoDB Atlas (Network Access → Add IP → Current IP or `0.0.0.0/0` for testing).
 
+5. Start the backend server:
+
+```bash
 npm run dev
+```
 
-Setup Frontend
+* You should see:
 
-Open a new terminal:
+```
+MongoDB Connected: cluster0.wk7zpvu.mongodb.net
+Server running on port 5001
+```
 
-cd Sales-CRM-Lite/frontend
+---
 
+### **3️⃣ Setup Frontend**
 
-Install dependencies:
+1. Open a new terminal window and navigate to the frontend folder:
 
+```bash
+cd frontend
+```
+
+2. Install frontend dependencies:
+
+```bash
 npm install
+```
 
+3. Start the frontend:
 
-Start the frontend:
-
+```bash
 npm start
+```
+
+* The app will run on: `http://localhost:3000`
+
+---
+
+### **4️⃣ Usage**
+
+1. Open your browser and go to `http://localhost:3000`
+2. Register a new user or login (Admin / Sales Rep)
+3. Add, update, and manage leads from the dashboard
+4. Send emails directly from the lead details page
+5. Track analytics and email performance
+
+---
+
+### **5️⃣ Deployment Instructions**
+
+* **Frontend:** Deploy via [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/)
+* **Backend:** Deploy via [Heroku](https://www.heroku.com/) or [Render](https://render.com/)
+* Ensure your **MongoDB Atlas IP whitelist** includes the server IP for deployed apps
 
 
-The app will run on http://localhost:3000 by default.
-
-Usage
-
-Register/Login with Admin or Sales Rep role
-
-Add and manage leads through the dashboard
-
-Send emails directly from the lead details page
-
-Track analytics and email performance in real-time
-
-Deployment Instructions
-
-Frontend: Deploy via Vercel / Netlify
-
-Backend: Deploy via Heroku / Render
-
-Ensure your MongoDB Atlas IP whitelist allows the deployed server
 

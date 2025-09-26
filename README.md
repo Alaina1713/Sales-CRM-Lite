@@ -92,14 +92,6 @@ npm install
 
 3. Create a `.env` file inside the **backend** folder:
 
-```env
-MONGO_URI=mongodb+srv://sales-crm-lite:u0gzXdNpRx8Eu0Sa@cluster0.wk7zpvu.mongodb.net/sales-crm-lite?retryWrites=true&w=majority
-JWT_SECRET=u0gzXdNpRx8Eu0Sa
-EMAIL_USER=alainarahim17@gmail.com
-EMAIL_PASS=Alaina1317
-PORT=5000
-```
-
 > **Notes:**
 >
 > * `MONGO_URI` → MongoDB Atlas connection string

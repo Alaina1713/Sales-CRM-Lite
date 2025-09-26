@@ -1,0 +1,45 @@
+frontend/
+│─ src/
+│   ├─ components/
+│   │   ├─ Navbar.js
+│   │   ├─ Sidebar.js
+│   │   └─ LeadCard.js
+│   ├─ pages/
+│   │   ├─ Login.js
+│   │   ├─ Register.js
+│   │   ├─ Dashboard.js
+│   │   ├─ Leads.js
+│   │   ├─ LeadDetail.js
+│   │   └─ Profile.js
+│   ├─ context/
+│   │   └─ AuthContext.js
+│   ├─ api/
+│   │   ├─ authApi.js
+│   │   ├─ leadApi.js
+│   │   └─ emailApi.js
+│   ├─ App.js
+│   ├─ index.js
+│   └─ theme.js
+│─ package.json  
+
+
+backend/
+│─ config/
+│   └─ db.js
+│─ controllers/
+│   ├─ authController.js
+│   ├─ leadController.js
+│   └─ emailController.js
+│─ middleware/
+│   ├─ authMiddleware.js
+│   └─ errorMiddleware.js
+│─ models/
+│   ├─ User.js
+│   ├─ Lead.js
+│   └─ Email.js
+│─ routes/
+│   ├─ authRoutes.js
+│   ├─ leadRoutes.js
+│   └─ emailRoutes.js
+│─ server.js
+│─ package.json
